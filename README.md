@@ -53,6 +53,24 @@ $ npm test
 
 We are using TypeScript and Babel to convert to JS which will run on Node 10 and the Firebase Emulator.
 
+### Node Native Addon
+
+A native addon is used to call Rust code (TCN) from JS using [Neon Bindings](https://neon-bindings.com/)
+
+1. Install [Rust](https://www.rust-lang.org/tools/install)
+2. Install Node Build Tools
+    - Mac:
+        1. Install Xcode
+        2. Install the Command Line Tools via Xcode under the menu *Xcode → Preferences → Downloads.*
+    - Windows:  
+    `npm install --global --production windows-build-tools`
+    - Linux/WSL:  
+    `sudo apt install -y make gcc g++`
+3. Build the native addon
+    ```
+    $ npm run install
+    ```
+
 ### Build
 
 To convert the .ts files in src into .js files in lib run:

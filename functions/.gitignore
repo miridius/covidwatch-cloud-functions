@@ -6,3 +6,8 @@
 typings/
 
 node_modules/
+
+# Neon/Rust build output
+native/target
+native/index.node
+native/artifacts.json

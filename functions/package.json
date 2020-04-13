@@ -11,7 +11,8 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "pretest": "tsc --build tsconfig.json",
-    "test": "env FIRESTORE_EMULATOR_HOST=localhost:8080 mocha --ui mocha-typescript .mocha"
+    "test": "env FIRESTORE_EMULATOR_HOST=localhost:8080 mocha --ui mocha-typescript .mocha",
+    "install": "npx neon build --release"
   },
   "engines": {
     "node": "10"
@@ -38,7 +39,8 @@
     "mocha": "^7.1.1",
     "mocha-typescript": "^1.1.17",
     "tslint": "^5.20.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "neon-cli": "^0.4.0"
   },
   "private": true
 }

@@ -1,6 +1,10 @@
 import * as functions from "firebase-functions"
 import { parse, DateClass, Field } from "sparkson"
 
+// Proof of concept to show that the call to TCN Rust module works.
+var tcn = require('../native');
+console.log(tcn.tcn_example()); // Should print "memo: symptom data"
+
 export class Report {
   constructor(
     @Field("contact_event_key_bytes") public contact_event_key_bytes: string,
